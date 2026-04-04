@@ -1,0 +1,231 @@
+/* Modern CSS Variables & Design System */
+:root {
+  --main-color: #008ae3;
+  --main-linear: linear-gradient(135deg, #008ae3, #00c5e5);
+  --text: #1c1c1e;
+  --muted: #6b7280;
+  --surface: #ffffff;
+  --page-bg: #f4f6f8;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 12px 40px rgba(0, 138, 227, 0.12);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-title {
+  color: var(--main-color);
+  letter-spacing: -0.02em;
+}
+
+.c-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.c-slogan {
+  font-size: clamp(1.35rem, 4.2vw, 2.25rem);
+  background: var(--main-linear);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  max-width: 36rem;
+  line-height: 1.25;
+}
+
+.c-lead {
+  max-width: 28rem;
+  line-height: 1.55;
+}
+
+.iframe-container {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--surface);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.c-btn {
+  color: #fff;
+  background: var(--main-linear);
+  padding: 0.65rem 1.75rem;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 138, 227, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.c-btn:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 6px 20px rgba(0, 138, 227, 0.4);
+}
+
+.c-btn:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .c-btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .c-btn:active {
+    transform: translateY(0);
+  }
+
+  @keyframes c-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .c-animate-in {
+    opacity: 0;
+    animation: c-fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .c-animate-in--delay-1 {
+    animation-delay: 0.5s;
+  }
+
+  .c-animate-in--delay-2 {
+    animation-delay: 0.7s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-animate-in {
+    opacity: 1;
+  }
+}
+
+/* Footer */
+.c-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(28, 28, 30, 0.08);
+  background: var(--surface);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.c-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .c-footer__inner {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+    padding: 1rem 1rem 1.25rem;
+  }
+}
+
+.c-footer__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.c-footer__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.c-footer__brand {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.c-footer__line {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+}
+
+@media (min-width: 576px) {
+  .c-footer__line {
+    justify-content: flex-start;
+  }
+}
+
+.c-footer__sep {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.45;
+  vertical-align: middle;
+}
+
+.c-footer__link {
+  color: var(--main-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.c-footer__link:hover {
+  color: #0070c4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-footer__link:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
