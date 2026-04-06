@@ -65,11 +65,13 @@ body {
 
 .c-slogan {
   font-size: 40px;
+  font-weight: 900;
   background: var(--main-linear);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px transparent;
   color: transparent;
   max-width: 50rem;
   line-height: 1.25;
