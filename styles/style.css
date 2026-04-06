@@ -1,4 +1,27 @@
 /* Modern CSS Variables & Design System */
+@font-face {
+  font-family: "poppins";
+  src: url(../fonts/Poppins-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../fonts/Poppins-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url(../fonts/Poppins-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
   --main-color: #008ae3;
   --main-linear: linear-gradient(135deg, #008ae3, #00c5e5);
@@ -18,7 +41,7 @@
 }
 
 body {
-  font-family: "SN Pro", sans-serif;
+  font-family: "poppins", sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: var(--page-bg);
@@ -48,7 +71,7 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  max-width: 70rem;
+  max-width: 50rem;
   line-height: 1.25;
 }
 
@@ -86,7 +109,6 @@ iframe {
 
 .c-test {
   width: 100%;
-  height: 100%;
   border: 0;
   display: block;
 }
@@ -211,6 +233,31 @@ iframe {
     text-align: left;
     gap: 1rem;
     padding: 1rem 1rem 1.25rem;
+  }
+}
+@media (max-width: 770px) {
+  .c-slogan {
+    font-size: 30px;
+  }
+  .c-lead {
+    font-size: 20px;
+  }
+}
+@media (max-width: 470px) {
+  .c-slogan {
+    font-size: 25px;
+  }
+  .c-lead {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .c-slogan {
+    font-size: 20px;
+  }
+  .c-lead {
+    font-size: 12px;
   }
 }
 
