@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Update this to your real domain after hosting:
-Sitemap: https://YOUR-DOMAIN-HERE.example/sitemap.xml
+Sitemap: https://microenglish.runasp.net/sitemap.xml

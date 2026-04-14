@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Replace YOUR-DOMAIN-HERE.example with your real domain after hosting -->
+  <!-- Domain: https://microenglish.runasp.net/ -->
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.example/</loc>
+    <loc>https://microenglish.runasp.net/</loc>
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN-HERE.example/main.html</loc>
+    <loc>https://microenglish.runasp.net/main.html</loc>
   </url>
 </urlset>
